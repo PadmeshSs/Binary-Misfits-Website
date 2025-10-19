@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "tailwindcss-intersect";
+@import 'swiper/css';
+@plugin "tailwindcss-motion";
+@plugin "tailwindcss-intersect";
+
+
+@theme { 
+  --breakpoint-big: 75rem; /* 1200px */
+  --breakpoint-medium: 62rem; /* 992px */
+  --font-display: 'Cascadia Code', Consolas, 'Courier New', monospace;
+
+  --animate-scroll: 30s scroll-left infinite linear;
+  --animate-scroll-reverse: 30s scroll-right infinite linear;
+
+  @keyframes scroll-left{
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scroll-right{
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@layer utilities{
+  .mask{
+    mask: linear-gradient(to right, transparent 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 100%);
+    -webkit-mask: linear-gradient(to right, transparent 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 100%);
+  }
+
+  .bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+  .montserrat {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+  }
+}
